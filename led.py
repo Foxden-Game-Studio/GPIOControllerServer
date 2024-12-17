@@ -3,11 +3,11 @@ from gpiozero import LED
 # Store LED objects for each pin
 led_objects = {}
 
-def ledOn(pin):
-    if pin not in led_objects:
-        led_objects[pin] = LED(pin)  # Create LED object for the pin
-    led_objects[pin].on()  # Turn on the LED
+def ledOn(ID: int, pin0: int, pin1: int):
+    if pin0 not in led_objects:
+        led_objects[pin0] = LED(pin0)  # Create LED object for the pin
+    led_objects[pin0].on()  # Turn on the LED
 
-def ledOff(pin):
-    if pin in led_objects:
-        led_objects[pin].off()  # Turn off the LED
+def ledOff(ID: int, pin0: int, pin1: int):
+    if pin0 in led_objects:
+        led_objects[pin0].off()  # Turn off the LED
